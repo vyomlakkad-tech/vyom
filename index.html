@@ -1,12 +1,183 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Page Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jio Style Website</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f7ff;
+            color: #222;
+        }
+
+        header {
+            background: #0866ff;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            background: white;
+            color: #0866ff;
+            border-radius: 50%;
+            padding: 8px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        .hero {
+            min-height: 75vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(135deg, #dceaff, #ffffff);
+        }
+
+        .hero h1 {
+            color: #0866ff;
+            font-size: 52px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #0866ff;
+            color: white;
+            padding: 14px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            margin: 5px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background: #0047bd;
+        }
+
+        .services {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding: 40px 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            width: 250px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px #00000015;
+        }
+
+        .card h2 {
+            color: #0866ff;
+            margin-bottom: 12px;
+        }
+
+        footer {
+            background: #0866ff;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 8px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-<h1>This is a vyom here</h1>
-<p>This is a paragraph.</p>
+    <header>
+        <div class="logo">Jio</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h1>Welcome to Digital India</h1>
+        <p>Experience a connected digital world.</p>
+
+        <div>
+            <a href="#services" class="btn">Explore Services</a>
+            <button class="btn" onclick="showMessage()">Learn More</button>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="card">
+            <h2>📱 Mobile</h2>
+            <p>Stay connected with friends and family.</p>
+        </div>
+
+        <div class="card">
+            <h2>🌐 Internet</h2>
+            <p>Explore the digital world online.</p>
+        </div>
+
+        <div class="card">
+            <h2>📺 Entertainment</h2>
+            <p>Enjoy your favorite digital content.</p>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <p>Demo website for learning HTML and CSS</p>
+        <p>© 2026 All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showMessage() {
+            alert("Welcome! Explore our digital services.");
+        }
+    </script>
 
 </body>
 </html>
